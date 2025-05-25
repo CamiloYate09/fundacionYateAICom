@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Yate AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <header class="bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500 shadow">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-white">Fundación Yate AI</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#docs" class="text-white hover:text-gray-200">Documentación</a>
+                    <a href="#proyectos" class="text-white hover:text-gray-200">Proyectos</a>
+                    <a href="#recursos" class="text-white hover:text-gray-200">Recursos</a>
+                    <a href="#blog" class="text-white hover:text-gray-200">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Main Message -->
+    <div class="hero-section bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
+                    <span class="block">YateAI</span>
+                    <span class="block text-3xl sm:text-4xl md:text-5xl text-pink-300">Innovación Colombiana en IA</span>
+                </h2>
+                <div class="mt-8 max-w-3xl mx-auto">
+                    <p class="text-xl leading-relaxed">
+                        En YateAI, creemos que la Inteligencia Artificial es la clave para desbloquear un futuro de mayor eficiencia y bienestar. Desde el corazón de Colombia, estamos construyendo un puente entre el conocimiento de la IA y las necesidades urgentes de seguridad, salud y movilidad.
+                    </p>
+                    <p class="text-xl leading-relaxed mt-4">
+                        Nuestra fundación no solo enseña; inspira y equipa a emprendedores para crear startups que no solo crezcan, sino que también transformen vidas. Estamos listos para mostrarle al mundo el poder de la innovación colombiana. Tu apoyo nos permite llevar estas soluciones al siguiente nivel.
+                    </p>
+                </div>
+                <div class="mt-10">
+                    <a href="#contacto" class="inline-block bg-white text-indigo-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl transition duration-300">
+                        Únete a Nosotros
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="px-4 py-6 sm:px-0">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Documentación -->
+                <div class="glass-card p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer card" data-section="docs">
+                    <div class="text-4xl mb-4 text-purple-600">📚</div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Documentación</h2>
+                    <p class="text-gray-600">Guías y tutoriales sobre IA</p>
+                </div>
+
+                <!-- Proyectos -->
+                <div class="glass-card p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer card" data-section="proyectos">
+                    <div class="text-4xl mb-4 text-pink-500">🚀</div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Proyectos</h2>
+                    <p class="text-gray-600">Proyectos de IA en desarrollo</p>
+                </div>
+
+                <!-- Recursos -->
+                <div class="glass-card p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer card" data-section="recursos">
+                    <div class="text-4xl mb-4 text-blue-500">🛠️</div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Recursos</h2>
+                    <p class="text-gray-600">Herramientas y recursos útiles</p>
+                </div>
+
+                <!-- Blog -->
+                <div class="glass-card p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer card" data-section="blog">
+                    <div class="text-4xl mb-4 text-indigo-600">📝</div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-2">Blog</h2>
+                    <p class="text-gray-600">Artículos y noticias sobre IA</p>
+                </div>
+            </div>
+
+            <!-- Secciones de contenido -->
+            <div id="content-sections" class="mt-8">
+                <!-- Documentación -->
+                <div id="docs-content" class="section-content hidden">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Documentación</h3>
+                            <button class="add-entry-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" data-section="docs">
+                                Agregar Entrada
+                            </button>
+                        </div>
+                        <div class="entries-container space-y-4">
+                            <!-- Las entradas se agregarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyectos -->
+                <div id="proyectos-content" class="section-content hidden">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Proyectos</h3>
+                            <button class="add-entry-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" data-section="proyectos">
+                                Agregar Proyecto
+                            </button>
+                        </div>
+                        <div class="entries-container space-y-4">
+                            <!-- Las entradas se agregarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursos -->
+                <div id="recursos-content" class="section-content hidden">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Recursos</h3>
+                            <button class="add-entry-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" data-section="recursos">
+                                Agregar Recurso
+                            </button>
+                        </div>
+                        <div class="entries-container space-y-4">
+                            <!-- Las entradas se agregarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog -->
+                <div id="blog-content" class="section-content hidden">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Blog</h3>
+                            <button class="add-entry-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" data-section="blog">
+                                Agregar Artículo
+                            </button>
+                        </div>
+                        <div class="entries-container space-y-4">
+                            <!-- Las entradas se agregarán aquí dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para agregar entradas -->
+    <div id="entry-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 w-full max-w-2xl">
+            <h3 class="text-xl font-bold mb-4">Agregar Nueva Entrada</h3>
+            <form id="entry-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Título</label>
+                    <input type="text" name="title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Descripción</label>
+                    <textarea name="description" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">URL (opcional)</label>
+                    <input type="url" name="url" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Fecha</label>
+                    <input type="date" name="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button type="button" class="cancel-btn px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Proyecto Insignia CityStream -->
+    <footer class="mt-16 py-12 bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Nuestro Proyecto Insignia</h2>
+                <div class="glass-card p-8 rounded-xl max-w-2xl mx-auto">
+                    <div class="flex flex-col items-center">
+                        <!-- Logo de CityStream (SVG estilizado) -->
+                        <div class="w-32 h-32 mb-4">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                <!-- Fondo del logo con gradiente -->
+                                <defs>
+                                    <linearGradient id="cityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#4b0082" />
+                                        <stop offset="50%" stop-color="#8a2be2" />
+                                        <stop offset="100%" stop-color="#ff69b4" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="90" fill="url(#cityGradient)" />
+
+                                <!-- Silueta de ciudad -->
+                                <path d="M30,140 L40,110 L50,120 L60,90 L70,100 L80,80 L90,110 L100,70 L110,90 L120,60 L130,80 L140,50 L150,70 L160,90 L170,110 L170,140 Z" 
+                                      fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="2" />
+
+                                <!-- Líneas de datos fluyendo -->
+                                <path d="M30,120 C50,110 70,130 90,120 C110,110 130,130 150,120 C170,110 190,130 210,120" 
+                                      fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-dasharray="4,2" />
+                                <path d="M30,130 C50,120 70,140 90,130 C110,120 130,140 150,130 C170,120 190,140 210,130" 
+                                      fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-dasharray="4,2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-indigo-900 mb-2">CityStream</h3>
+                        <p class="text-gray-700 mb-6">Transformando ciudades con inteligencia artificial y análisis de datos en tiempo real.</p>
+                        <a href="https://citystream.co/" target="_blank" class="inline-block bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform transition hover:-translate-y-1 hover:scale-105 duration-300">
+                            Visitar CityStream
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

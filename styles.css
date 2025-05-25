@@ -1,0 +1,210 @@
+/* Estilos personalizados - Apple AI inspired */
+:root {
+    --primary-color: #8a2be2; /* Purple */
+    --secondary-color: #ff69b4; /* Pink */
+    --accent-color: #1e90ff; /* Blue */
+    --gradient-start: #4b0082; /* Indigo */
+    --gradient-middle: #8a2be2; /* Purple */
+    --gradient-end: #ff69b4; /* Pink */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --background-light: #f8f9fa;
+    --card-background: #ffffff;
+    --card-hover-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(255, 105, 180, 0.3), transparent 60%),
+                radial-gradient(circle at bottom left, rgba(30, 144, 255, 0.3), transparent 60%);
+    z-index: 0;
+}
+
+.hero-section > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Apple-inspired glass morphism effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estilos personalizados para las tarjetas */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--card-background);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* Estilo para las secciones */
+[data-section] {
+    border-radius: 12px;
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    transition: all 0.3s ease;
+}
+
+[data-section]:hover {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.05) 0%, rgba(255, 105, 180, 0.05) 100%);
+}
+
+/* Estilos para el modal */
+.modal {
+    transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Estilos para las entradas */
+.entry {
+    transition: all 0.3s ease;
+}
+
+.entry:hover {
+    transform: translateX(5px);
+}
+
+/* Estilos para los botones */
+button {
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.add-entry-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    border: none;
+    color: white !important;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(138, 43, 226, 0.2);
+}
+
+.add-entry-btn:hover {
+    box-shadow: 0 6px 12px rgba(138, 43, 226, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.entries-container {
+    border-radius: 12px;
+    padding: 16px;
+    background-color: rgba(248, 249, 250, 0.5);
+}
+
+.entry {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 16px;
+    margin-bottom: 16px;
+    background-color: white;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-background: #2d2d2d;
+        --background-light: #1f1f1f;
+        --text-light: #ffffff;
+        --text-dark: #e0e0e0;
+    }
+
+    body {
+        background-color: #1a1a1a;
+        color: var(--text-light);
+    }
+
+    .bg-white {
+        background-color: #2d2d2d;
+    }
+
+    .bg-gray-50 {
+        background-color: #1f1f1f;
+    }
+
+    .text-gray-900 {
+        color: var(--text-light);
+    }
+
+    .text-gray-600 {
+        color: #a0a0a0;
+    }
+
+    .text-gray-700 {
+        color: #d1d1d1;
+    }
+
+    .glass-card {
+        background: rgba(45, 45, 45, 0.7);
+        border: 1px solid rgba(80, 80, 80, 0.2);
+    }
+
+    .entries-container {
+        background-color: rgba(45, 45, 45, 0.5);
+    }
+
+    .entry {
+        background-color: #2d2d2d;
+    }
+
+    [data-section]:hover {
+        background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(255, 105, 180, 0.1) 100%);
+    }
+
+    input, textarea {
+        background-color: #2d2d2d;
+        border-color: #404040;
+        color: var(--text-light);
+    }
+
+    input:focus, textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+    }
+}
