@@ -54,128 +54,28 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-4">Nuestra Visión 2034</h2>
-                <p class="text-xl">Una década de innovación y desarrollo en Inteligencia Artificial</p>
+                <p class="text-xl">Rectos 2025 - 2026</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
                 <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                     <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-semibold mb-2">Investigación Avanzada</h3>
-                    <p>Desarrollar 10 proyectos pioneros en IA para 2034</p>
+                    <h3 class="text-xl font-semibold mb-2">Investigación</h3>
+                    <p>Regulación con el gobierno de Colombia, con leyes, normas y políticas públicas sobre la IA</p>
                 </div>
                 <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                     <div class="text-4xl mb-4">👥</div>
-                    <h3 class="text-xl font-semibold mb-2">Formación</h3>
-                    <p>Capacitar a más de 1,000 profesionales en IA</p>
+                    <h3 class="text-xl font-semibold mb-2">Plataforma</h3> 
+                    <p>Plataforma para todo el ecosistema de la IA en Colombia con Yate AI, semestre 2 2025</p>
                 </div>
                 <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                     <div class="text-4xl mb-4">🤝</div>
-                    <h3 class="text-xl font-semibold mb-2">Colaboración</h3>
-                    <p>Establecer alianzas con 50 instituciones líderes</p>
-                </div>
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
-                    <div class="text-4xl mb-4">🌍</div>
-                    <h3 class="text-xl font-semibold mb-2">Impacto Global</h3>
-                    <p>Implementar soluciones en 20 países</p>
+                    <h3 class="text-xl font-semibold mb-2">Plataforma CityStream</h3>
+                    <p>Plataforma semestre 1 2026, Producción IOS y Android</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Secciones de contenido -->
-    <div id="content-sections" class="mt-8">
-        <!-- Documentación -->
-        <div id="docs-content" class="section-content hidden">
-            <div class="glass-card p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">Documentación</h3>
-                    <button class="add-entry-btn bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300" data-section="docs">
-                        Agregar Entrada
-                    </button>
-                </div>
-                <div class="entries-container space-y-4">
-                    <!-- Las entradas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Proyectos -->
-        <div id="proyectos-content" class="section-content hidden">
-            <div class="glass-card p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">Proyectos</h3>
-                    <button class="add-entry-btn bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300" data-section="proyectos">
-                        Agregar Proyecto
-                    </button>
-                </div>
-                <div class="entries-container space-y-4">
-                    <!-- Las entradas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Recursos -->
-        <div id="recursos-content" class="section-content hidden">
-            <div class="glass-card p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">Recursos</h3>
-                    <button class="add-entry-btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300" data-section="recursos">
-                        Agregar Recurso
-                    </button>
-                </div>
-                <div class="entries-container space-y-4">
-                    <!-- Las entradas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Blog -->
-        <div id="blog-content" class="section-content hidden">
-            <div class="glass-card p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-xl font-bold">Blog</h3>
-                    <button class="add-entry-btn bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300" data-section="blog">
-                        Agregar Artículo
-                    </button>
-                </div>
-                <div class="entries-container space-y-4">
-                    <!-- Las entradas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para agregar entradas -->
-    <div id="entry-modal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-white rounded-lg p-6 w-full max-w-2xl">
-            <h3 class="text-xl font-bold mb-4">Agregar Nueva Entrada</h3>
-            <form id="entry-form" class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Título</label>
-                    <input type="text" name="title" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Descripción</label>
-                    <textarea name="description" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">URL (opcional)</label>
-                    <input type="url" name="url" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Fecha</label>
-                    <input type="date" name="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                </div>
-                <div class="flex justify-end space-x-3">
-                    <button type="button" class="cancel-btn px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
-                        Cancelar
-                    </button>
-                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-                        Guardar
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 
