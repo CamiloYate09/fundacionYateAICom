@@ -69,10 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Crear y mostrar nuevos mensajes de error
         const errorContainer = document.createElement('div');
         errorContainer.className = 'error-container bg-red-50 border border-red-200 rounded-md p-4 mb-4';
-        
+
         const errorList = document.createElement('ul');
         errorList.className = 'list-disc list-inside text-red-600';
-        
+
         errors.forEach(error => {
             const li = document.createElement('li');
             li.textContent = error;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createEntry(data) {
         const entry = document.createElement('div');
         entry.className = 'bg-gray-50 p-4 rounded-lg entry';
-        
+
         const date = new Date(data.date);
         const formattedDate = date.toLocaleDateString('es-ES', {
             year: 'numeric',
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Manejar el envío del formulario
     entryForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const formData = new FormData(entryForm);
         const errors = validateForm(formData);
 
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = `fundacion-yate-${section}`;
             const entries = JSON.parse(localStorage.getItem(key) || '[]');
             const container = document.querySelector(`#${section}-content .entries-container`);
-            
+
             entries.forEach(data => {
                 const entry = createEntry(data);
                 container.appendChild(entry);
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Detectar el modo oscuro del sistema
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     function handleDarkModeChange(e) {
         if (e.matches) {
             document.body.classList.add('dark-mode');
@@ -232,4 +232,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Escuchar cambios en el modo oscuro
     darkModeMediaQuery.addListener(handleDarkModeChange);
     handleDarkModeChange(darkModeMediaQuery);
-}); 
+});
