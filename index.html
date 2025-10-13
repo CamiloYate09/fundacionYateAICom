@@ -8,24 +8,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 ai-intel-frame">
+<!-- Language Switcher -->
+<div id="lang-switch" class="fixed top-3 right-4 z-[2147483646]">
+  <div class="ai-intel-border bg-white/80 backdrop-blur px-2 py-1 rounded-full shadow hover:shadow-md transition">
+    <button type="button" class="lang-btn inline-flex items-center gap-1 px-2 py-1 rounded-full text-sm font-medium text-gray-800" data-lang="es" aria-label="Cambiar a Español" title="Español">🇪🇸 <span class="hidden sm:inline">ES</span></button>
+    <span class="mx-1 text-gray-400 select-none">|</span>
+    <button type="button" class="lang-btn inline-flex items-center gap-1 px-2 py-1 rounded-full text-sm font-medium text-gray-800" data-lang="en" aria-label="Switch to English" title="English">🇺🇸 <span class="hidden sm:inline">EN</span></button>
+  </div>
+</div>
 <!-- Hero Section -->
 <section class="bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
                 <span class="block"><span class="ai-intel-border inline-block rounded-full px-4 py-1">YateAI</span></span>
-                <span class="block text-3xl sm:text-4xl md:text-5xl text-pink-300">Innovación Colombiana en IA</span>
+                <span class="block text-3xl sm:text-4xl md:text-5xl text-pink-300" data-i18n="hero_subtitle">Innovación Colombiana en IA</span>
             </h2>
             <div class="mt-8 max-w-3xl mx-auto">
-                <p class="text-xl leading-relaxed">
+                <p class="text-xl leading-relaxed" data-i18n="hero_p1">
                     En <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">YateAI</span>, creemos que la Inteligencia Artificial es la clave para desbloquear un futuro de mayor eficiencia y bienestar. Desde el corazón de Colombia, estamos construyendo un puente entre el conocimiento de la IA y las necesidades urgentes de seguridad, salud y movilidad.
                 </p>
-                <p class="text-xl leading-relaxed mt-4">
+                <p class="text-xl leading-relaxed mt-4" data-i18n="hero_p2">
                     Nuestra fundación no solo enseña; inspira y equipa a emprendedores para crear startups que no solo crezcan, sino que también transformen vidas. Estamos listos para mostrarle al mundo el poder de la innovación colombiana. Tu apoyo nos permite llevar estas soluciones al siguiente nivel.
                 </p>
             </div>
             <div class="mt-10">
-                <a href="#contacto" class="ai-intel-border inline-block bg-white text-indigo-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl transition duration-300">
+                <a href="#contacto" class="ai-intel-border inline-block bg-white text-indigo-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl transition duration-300" data-i18n="cta_join">
                     Únete a Nosotros
                 </a>
             </div>
@@ -37,24 +45,24 @@
 <section class="py-16 bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold mb-4">Nuestra Visión 2034</h2>
-            <p class="text-xl">Retos 2025 - 2026</p>
+            <h2 class="text-4xl font-bold mb-4" data-i18n="vision_title">Nuestra Visión 2034</h2>
+            <p class="text-xl" data-i18n="vision_subtitle">Retos 2025 - 2026</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                 <div class="text-4xl mb-4">🎯</div>
-                <h3 class="text-xl font-semibold mb-2">Investigación</h3>
-                <p>Regulación con el gobierno de Colombia, con leyes, normas y políticas públicas sobre la IA</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="card1_title">Investigación</h3>
+                <p data-i18n="card1_text">Regulación con el gobierno de Colombia, con leyes, normas y políticas públicas sobre la IA</p>
             </div>
             <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                 <div class="text-4xl mb-4">👥</div>
-                <h3 class="text-xl font-semibold mb-2">Plataforma</h3>
-                <p>Plataforma para todo el ecosistema de la IA en Colombia con <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">Yate AI</span>, semestre 2 2025</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="card2_title">Plataforma</h3>
+                <p data-i18n="card2_text">Plataforma para todo el ecosistema de la IA en Colombia con <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">Yate AI</span>, semestre 2 2025</p>
             </div>
             <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm">
                 <div class="text-4xl mb-4">🤝</div>
-                <h3 class="text-xl font-semibold mb-2">Plataforma CityStream</h3>
-                <p>Plataforma semestre 1 2026, Producción IOS y Android</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="card3_title">Plataforma CityStream</h3>
+                <p data-i18n="card3_text">Plataforma semestre 1 2026, Producción IOS y Android</p>
             </div>
         </div>
     </div>
@@ -64,11 +72,11 @@
 <section class="py-16 bg-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold">Videos Recomendados</h2>
+            <h2 class="text-3xl font-bold" data-i18n="videos_title">Videos Recomendados</h2>
         </div>
         <div class="flex justify-center">
             <div class="w-full md:w-2/3 lg:w-1/2">
-                <iframe class="w-full rounded-lg shadow-lg"
+                <iframe id="main-video" class="w-full rounded-lg shadow-lg"
                         style="aspect-ratio:16/9;"
                         src="https://www.youtube-nocookie.com/embed/ShYKkPPhOoc?start=1690"
                         title="Charla sobre IA y futuro de Colombia"
@@ -78,9 +86,9 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 <div class="mt-6 text-center">
-                    <p class="text-lg mb-2">Charla sobre IA y futuro de Colombia</p>
-                    <a href="https://www.youtube.com/watch?v=ShYKkPPhOoc&t=1690s" target="_blank" class="text-indigo-600 hover:underline">Ver en YouTube</a>
-                    <p class="text-sm text-gray-500 mt-1">Si el reproductor no carga, haz clic en el enlace para verlo directamente en YouTube.</p>
+                    <p class="text-lg mb-2" data-i18n="video_caption">Charla sobre IA y futuro de Colombia</p>
+                    <a href="https://www.youtube.com/watch?v=ShYKkPPhOoc&t=1690s" target="_blank" class="text-indigo-600 hover:underline" data-i18n="video_link">Ver en YouTube</a>
+                    <p class="text-sm text-gray-500 mt-1" data-i18n="video_note">Si el reproductor no carga, haz clic en el enlace para verlo directamente en YouTube.</p>
                 </div>
             </div>
         </div>
@@ -93,8 +101,8 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <!-- About Column -->
             <div class="md:col-span-1">
-                <h3 class="text-xl font-bold mb-4 text-pink-300">Fundación <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">YateAI</span></h3>
-                <p class="text-gray-300 mb-4">Innovación Colombiana en Inteligencia Artificial para un futuro más eficiente y con mayor bienestar.</p>
+                <h3 class="text-xl font-bold mb-4 text-pink-300" data-i18n="footer_foundation_heading">Fundación <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">YateAI</span></h3>
+                <p class="text-gray-300 mb-4" data-i18n="footer_about">Innovación Colombiana en Inteligencia Artificial para un futuro más eficiente y con mayor bienestar.</p>
                 <div class="flex space-x-4 mt-4">
                     <a href="#" class="text-gray-300 hover:text-pink-300 transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -121,19 +129,19 @@
 
             <!-- Links Column -->
             <div class="md:col-span-1">
-                <h3 class="text-xl font-bold mb-4 text-pink-300">Enlaces</h3>
+                <h3 class="text-xl font-bold mb-4 text-pink-300" data-i18n="links_heading">Enlaces</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sobre Nosotros</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Proyectos</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Investigación</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-i18n="link_home">Inicio</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-i18n="link_about">Sobre Nosotros</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-i18n="link_projects">Proyectos</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-i18n="link_research">Investigación</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white transition-colors" data-i18n="link_blog">Blog</a></li>
                 </ul>
             </div>
 
             <!-- Contact Column -->
             <div class="md:col-span-1">
-                <h3 class="text-xl font-bold mb-4 text-pink-300">Contacto</h3>
+                <h3 class="text-xl font-bold mb-4 text-pink-300" data-i18n="contact_heading">Contacto</h3>
                 <ul class="space-y-2">
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-pink-300 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,7 +167,7 @@
 
             <!-- Project Highlight Column -->
             <div class="md:col-span-1">
-                <h3 class="text-xl font-bold mb-4 text-pink-300">Proyecto Insignia</h3>
+                <h3 class="text-xl font-bold mb-4 text-pink-300" data-i18n="project_heading">Proyecto Insignia</h3>
                 <div class="glass-card p-4 rounded-lg bg-gray-800 bg-opacity-50">
                     <div class="flex items-center mb-3">
                         <div class="w-10 h-10 mr-3">
@@ -178,8 +186,8 @@
                         </div>
                         <h4 class="font-bold text-white">CityStream</h4>
                     </div>
-                    <p class="text-gray-300 text-sm mb-3">Transformando ciudades con inteligencia artificial y análisis de datos en tiempo real.</p>
-                    <a href="https://citystream.co/" target="_blank" class="inline-block bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-sm font-bold py-2 px-4 rounded-full hover:shadow-lg transform transition hover:-translate-y-1 duration-300">
+                    <p class="text-gray-300 text-sm mb-3" data-i18n="project_desc">Transformando ciudades con inteligencia artificial y análisis de datos en tiempo real.</p>
+                    <a href="https://citystream.co/" target="_blank" class="inline-block bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-sm font-bold py-2 px-4 rounded-full hover:shadow-lg transform transition hover:-translate-y-1 duration-300" data-i18n="visit_btn">
                         Visitar
                     </a>
                 </div>
@@ -191,11 +199,11 @@
 
         <!-- Copyright -->
         <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Fundación <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">YateAI</span>. Todos los derechos reservados.</p>
+            <p class="text-gray-400 text-sm mb-4 md:mb-0" data-i18n="copyright">© 2025 Fundación <span class="ai-intel-border inline-block rounded-full px-2 py-0.5">YateAI</span>. Todos los derechos reservados.</p>
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white text-sm">Política de Privacidad</a>
-                <a href="#" class="text-gray-400 hover:text-white text-sm">Términos de Servicio</a>
-                <a href="#" class="text-gray-400 hover:text-white text-sm">Mapa del Sitio</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm" data-i18n="policy">Política de Privacidad</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm" data-i18n="terms">Términos de Servicio</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm" data-i18n="sitemap">Mapa del Sitio</a>
             </div>
         </div>
     </div>
