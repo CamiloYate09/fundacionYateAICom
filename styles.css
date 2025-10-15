@@ -24,8 +24,9 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     letter-spacing: -0.01em;
+    font-weight: 700;
 }
 
 /* Enlaces y enfoque accesible */
