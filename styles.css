@@ -14,6 +14,52 @@
     --gradient-border: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d);
 }
 
+/* Tipografías y base de accesibilidad */
+html {
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+}
+
+/* Enlaces y enfoque accesible */
+:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+a:focus-visible, button:focus-visible {
+    box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.35);
+}
+
+/* Skip link para accesibilidad */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+}
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: #111827;
+    color: #ffffff;
+    border-radius: 8px;
+    z-index: 2147483646;
+}
+
 /* Hero Section Styles */
 .hero-section {
     position: relative;

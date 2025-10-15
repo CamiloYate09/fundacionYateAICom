@@ -2,20 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundación Yate AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fundación YateAI — Innovación Colombiana en IA</title>
+    <meta name="description" content="Fundación YateAI impulsa la innovación colombiana en Inteligencia Artificial con proyectos en seguridad, salud y movilidad.">
+    <link rel="canonical" href="https://yateai.co/">
+    <meta name="theme-color" content="#4b0082">
+    <meta property="og:title" content="Fundación YateAI — Innovación Colombiana en IA">
+    <meta property="og:description" content="Impulsamos la innovación colombiana en Inteligencia Artificial.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yateai.co/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fundación YateAI — Innovación Colombiana en IA">
+    <meta name="twitter:description" content="Impulsamos la innovación colombiana en Inteligencia Artificial.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 ai-intel-frame">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 <!-- Language Switcher -->
-<div id="lang-switch" class="fixed top-3 right-4 z-[2147483646]">
+<div id="lang-switch" class="fixed top-3 right-4 z-[2147483646]" role="group" aria-label="Selector de idioma">
   <div class="ai-intel-border bg-white/80 backdrop-blur px-2 py-1 rounded-full shadow hover:shadow-md transition">
     <button type="button" class="lang-btn inline-flex items-center gap-1 px-2 py-1 rounded-full text-sm font-medium text-gray-800" data-lang="es" aria-label="Cambiar a Español" title="Español">🇪🇸 <span class="hidden sm:inline">ES</span></button>
     <span class="mx-1 text-gray-400 select-none">|</span>
     <button type="button" class="lang-btn inline-flex items-center gap-1 px-2 py-1 rounded-full text-sm font-medium text-gray-800" data-lang="en" aria-label="Switch to English" title="English">🇺🇸 <span class="hidden sm:inline">EN</span></button>
   </div>
 </div>
+<main id="contenido" tabindex="-1">
 <!-- Hero Section -->
 <section class="bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +48,7 @@
                 </p>
             </div>
             <div class="mt-10">
-                <a href="#contacto" class="ai-intel-border inline-block bg-white text-indigo-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl transition duration-300" data-i18n="cta_join">
+                <a href="#contacto" class="ai-intel-border inline-block bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:brightness-110 transition duration-300" data-i18n="cta_join">
                     Únete a Nosotros
                 </a>
             </div>
@@ -87,13 +102,14 @@
                         allowfullscreen></iframe>
                 <div class="mt-6 text-center">
                     <p class="text-lg mb-2" data-i18n="video_caption">Charla sobre IA y futuro de Colombia</p>
-                    <a href="https://www.youtube.com/watch?v=ShYKkPPhOoc&t=1690s" target="_blank" class="text-indigo-600 hover:underline" data-i18n="video_link">Ver en YouTube</a>
+                    <a href="https://www.youtube.com/watch?v=ShYKkPPhOoc&t=1690s" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline" data-i18n="video_link">Ver en YouTube</a>
                     <p class="text-sm text-gray-500 mt-1" data-i18n="video_note">Si el reproductor no carga, haz clic en el enlace para verlo directamente en YouTube.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+</main>
 <!-- Footer -->
 <footer class="py-12 bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +157,7 @@
 
             <!-- Contact Column -->
             <div class="md:col-span-1">
-                <h3 class="text-xl font-bold mb-4 text-pink-300" data-i18n="contact_heading">Contacto</h3>
+                <h3 id="contacto" class="text-xl font-bold mb-4 text-pink-300" data-i18n="contact_heading">Contacto</h3>
                 <ul class="space-y-2">
                     <li class="flex items-start">
                         <svg class="w-5 h-5 text-pink-300 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -187,7 +203,7 @@
                         <h4 class="font-bold text-white">CityStream</h4>
                     </div>
                     <p class="text-gray-300 text-sm mb-3" data-i18n="project_desc">Transformando ciudades con inteligencia artificial y análisis de datos en tiempo real.</p>
-                    <a href="https://citystream.co/" target="_blank" class="inline-block bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-sm font-bold py-2 px-4 rounded-full hover:shadow-lg transform transition hover:-translate-y-1 duration-300" data-i18n="visit_btn">
+                    <a href="https://citystream.co/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-sm font-bold py-2 px-4 rounded-full hover:shadow-lg transform transition hover:-translate-y-1 duration-300" data-i18n="visit_btn">
                         Visitar
                     </a>
                 </div>
@@ -208,6 +224,6 @@
         </div>
     </div>
 </footer>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -238,8 +238,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Escuchar cambios en el modo oscuro
-    darkModeMediaQuery.addListener(handleDarkModeChange);
+    // Escuchar cambios en el modo oscuro (API moderna con compatibilidad)
+    if (typeof darkModeMediaQuery.addEventListener === 'function') {
+        darkModeMediaQuery.addEventListener('change', handleDarkModeChange);
+    } else if (typeof darkModeMediaQuery.addListener === 'function') { // Safari legacy
+        darkModeMediaQuery.addListener(handleDarkModeChange);
+    }
     handleDarkModeChange(darkModeMediaQuery);
 
     // =====================
@@ -309,13 +313,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 video.setAttribute('title', isEN ? EN.video_caption : 'Charla sobre IA y futuro de Colombia');
             }
 
-            // Estado visual de los botones
+            // Estado visual y accesible de los botones
             const buttons = document.querySelectorAll('#lang-switch .lang-btn');
             buttons.forEach(btn => {
                 const active = btn.dataset.lang === (isEN ? 'en' : 'es');
                 btn.classList.toggle('bg-indigo-600', active);
                 btn.classList.toggle('text-white', active);
                 btn.classList.toggle('text-gray-800', !active);
+                btn.setAttribute('aria-pressed', active ? 'true' : 'false');
             });
 
             try { localStorage.setItem('lang', isEN ? 'en' : 'es'); } catch (_) {}
